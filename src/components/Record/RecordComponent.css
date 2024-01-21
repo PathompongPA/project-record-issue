@@ -1,0 +1,73 @@
+* {
+  /* border: 1px solid black; */
+}
+#RecordComponent {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin: 60px;
+  #box-RecordComponent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #form-record {
+      #input-Department {
+        width: 340px;
+        height: 40px;
+        border-radius: 8px;
+        font-size: 16px;
+        text-indent: 10px;
+        margin-right: 22px;
+        margin-bottom: 25px;
+      }
+      #input-Date {
+        width: 340px;
+        height: 40px;
+        border-radius: 8px;
+        font-size: 16px;
+        text-indent: 10px;
+        margin-bottom: 25px;
+        border: 2px solid rgb(179, 179, 179);
+      }
+      #input-Product-Key {
+        margin-bottom: 25px;
+      }
+      #input-Product-Name {
+        margin-bottom: 25px;
+      }
+      #input-Issue {
+        height: 80px;
+        margin-bottom: 25px;
+      }
+      #input-Note {
+        height: 80px;
+        margin-bottom: 30px;
+        margin-bottom: 25px;
+      }
+      #input-record-submit {
+        width: 710px;
+        margin-bottom: 25px;
+        background-color: rgb(255, 255, 255);
+      }
+      #input-record-submit:hover {
+        background-color: rgb(204, 204, 204);
+      }
+    }
+  }
+}
+.input-record {
+  width: 700px;
+  height: 40px;
+  border-radius: 8px;
+  text-indent: 10px;
+  font-size: 16px;
+  border: 2px solid rgb(179, 179, 179);
+}
+option {
+  height: 100px !important;
+}

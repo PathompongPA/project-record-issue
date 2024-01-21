@@ -1,0 +1,50 @@
+* {
+  /* border: 1px solid black; */
+}
+#card-result {
+  width: 700px;
+  .form-card-result {
+    padding: 1px;
+    #box-card {
+      display: grid;
+      grid-template-columns: 5% 10% 25% 25% 25% 10%;
+      #result-search-index {
+      }
+      #result-search-department {
+      }
+      #result-search-issue {
+      }
+      #result-search-note {
+      }
+      #result-search-date {
+        text-align: start;
+      }
+      #box-button-result {
+        display: flex;
+        justify-content: flex-end;
+
+        #btn-edit-card-result {
+          display: block;
+        }
+        #btn-save-card-result {
+          display: none;
+        }
+        #btn-delete-card-result {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.title-card-result {
+  background-color: rgb(255, 255, 255, 0.1);
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.add-bg {
+  background-color: rgb(230, 230, 230);
+}

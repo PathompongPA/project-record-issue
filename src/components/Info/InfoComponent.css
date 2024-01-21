@@ -1,0 +1,46 @@
+#InfoComponent {
+  border-top: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  #box-InfoComponent {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 80% 20%;
+    #box-info {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      #info-title {
+      }
+      #info-description {
+      }
+    }
+    #box-credit {
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+      justify-content: center;
+      height: 25%;
+      /* border: 1px solid black; */
+      #box-credit-1 {
+      }
+      #box-credit-2 {
+      }
+      #box-credit-3 {
+      }
+    }
+  }
+}
+.box-credit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
