@@ -4,6 +4,6 @@ import App from "../../App";
 describe("some", () => {
   it("Title :", () => {
     render(<App />);
-    expect(screen.getByText(/ระบบบันทึกข้อมูล/)).toBeInTheDocument();
+    expect(screen.getByText(/หาประจำวัน/)).toBeInTheDocument();
   });
 });

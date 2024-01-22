@@ -3,6 +3,6 @@ import App from "./App";
 
 it("renders learn react link", () => {
   render(<App />);
-  const linkElement = screen.getByText(/ระบบบันทึกข้อมูล/);
+  const linkElement = screen.getByText(/ปัญหาประจำวัน/);
   expect(linkElement).toBeInTheDocument();
 });

@@ -6,12 +6,14 @@ export const stateManagement = (state, action) => {
       return { count: state.count, showText: !state.showText };
     case "add":
       return { stateUser: state.stateUser++ };
-    case "add-Record":
+    case "Record-add":
       return { ...state, Record: action.payload };
-    case "clear-Record":
+    case "Record-clear":
       return { ...state, Record: undefined };
-    case "add-Products":
+    case "Products-add":
       return { ...state, Products: action.payload };
+    case "Products-delete":
+      return { ...state, Products: null };
     case "add-value-search-form":
       return { ...state, SearchForm: action.payload };
     default:

@@ -2,22 +2,35 @@ import { useContext, useEffect } from "react";
 import { BtnBack, CardResultSearch } from "../../materials";
 import "./SearchComponent.css";
 import { Context } from "../../App";
+import GetDataFromServeAndSetState from "../../utilities/httpMethod";
 
 export default function SearchComponent() {
-  const [state, dispatch] = useContext(Context);
+  const { state, dispatch } = useContext(Context);
   console.log("state : ", state);
   useEffect(() => {
     console.log("state in useEffect  SearchComponent : ", state);
-    // GetProducts({}, dispatch);
-    dispatch({ type: "clear-Record" });
+    // dispatch({ type: "clear-Record" });
+    GetDataFromServeAndSetState(
+      "http://192.168.1.64:11111/",
+      "GET",
+      {},
+      dispatch,
+      "Products-add"
+    );
   }, []);
 
   function submitFormSearch(e) {
     e.preventDefault();
     const body = {};
     body.Product_Key = e.target[0].value;
+    GetDataFromServeAndSetState(
+      "http://192.168.1.64:11111/record",
+      "POST",
+      body,
+      dispatch,
+      "Record-add"
+    );
     dispatch({ type: "add-value-search-form", payload: body.Product_Key });
-    // GetHttp("http://192.168.1.64:11111/record",)
   }
 
   return (

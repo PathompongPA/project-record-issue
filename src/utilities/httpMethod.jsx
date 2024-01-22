@@ -1,7 +1,7 @@
 export default function GetDataFromServeAndSetState(
   url,
-  method,
-  body,
+  method = "GET",
+  body = {},
   dispatch,
   actionType
 ) {
@@ -12,9 +12,11 @@ export default function GetDataFromServeAndSetState(
     body: method === "GET" ? undefined : JSON.stringify(body),
   })
     .then((res) => {
+      console.log(res);
       return res.json();
     })
     .then((res) => {
+      console.log(res);
       dispatch({ type: actionType, payload: res });
     })
     .catch((err) => {

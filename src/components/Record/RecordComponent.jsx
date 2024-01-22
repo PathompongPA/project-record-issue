@@ -1,10 +1,13 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { BtnBack } from "../../materials";
 import "./RecordComponent.css";
+import GetDataFromServeAndSetState from "../../utilities/httpMethod";
+import { Context } from "../../App";
 
 export default function RecordComponent() {
   const navigation = useNavigate();
+  const { state, dispatch } = useContext(Context);
   useEffect(() => {
     console.log(Date());
     document.getElementById("input-Date").defaultValue = Date();
@@ -28,6 +31,13 @@ export default function RecordComponent() {
             body.Issue = event.target[4].value;
             body.note = event.target[5].value;
             console.log("body : ", body);
+            GetDataFromServeAndSetState(
+              "http://192.168.1.64:11111/issue",
+              "POST",
+              body,
+              dispatch,
+              "Products-delete"
+            );
             await fetch("http://192.168.1.64:11111/issue", {
               method: "POST",
               body: JSON.stringify(body),

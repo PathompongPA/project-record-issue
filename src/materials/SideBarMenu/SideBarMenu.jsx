@@ -7,7 +7,7 @@ export default function SideBarMenu() {
       <div id="box">
         <div id="title-menu">
           <h1>
-            <Link to={"/"}>ระบบบันทึกข้อมูล</Link>
+            <Link to={"/"}>ปัญหาประจำวัน</Link>
           </h1>
         </div>
         <br></br>
